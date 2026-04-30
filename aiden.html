@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aiden Clark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+
+  <style>
+    .dragon-image { text-align: center; margin: 20px 0; }
+    .dragon-photo { max-width: 350px; height: auto; border-radius: 10px; }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <header class="dragon-header">
+      <div class="dragon-name">Aiden Clark</div>
+      <div class="dragon-class">Main Character</div>
+    </header>
+
+    <div class="dragon-image">
+      <img src="Aiden.webp" alt="Aiden Clark" class="dragon-photo">
+    </div>
+
+    <section class="section description-block">
+      <div class="section-title">Description</div>
+      <div class="section-body">
+        <p>
+          Aiden Clark is a protagonist in School Bus Graveyard. He debuted in Episode 1, and is an incredibly eccentric teenage boy, notable by the fact he's always seen smiling.      </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Personality</div>
+      <div class="section-body">
+        <p>
+          Aiden is an incredibly talkative boy, seen yapping Ashlyn's ears off when they first meet. He's also seen as a thrill seeker, as he enjoys things such as skydiving, racing, and other activities. He also turns around and sprays a phantom in the eyes when he, Ben, and Ashlyn are being chased. He's unafraid to talk down to others, as seen when he butts heads with Tyler after Tyler begins to yell at Ashlyn. </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Physical Appearance</div>
+      <div class="section-body">
+        <p>
+          Aiden Clark is an average height boy, standing at 5'4. He has tan skin and crimson red eyes but has been seen with dark brown eyes as a child. He has incredibly thin black brows. He has blonde hair that fluffs out around his head, and bangs that swirl to the right side of his head. It's canon that his hair was black, he admits to dying his hair. He's usually seen wearing clothes with smiley faces on them. In the phantom dimension, he can be seen wearing the black protective suit that he purchased. In season 2, episode 90, we find out that he wears contact lenses to help him see as well as to change his eye colour to red.    </p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+    charBtn.addEventListener("click", (e) => { e.stopPropagation(); charDrop.classList.toggle("open"); });
+    document.addEventListener("click", () => { charDrop.classList.remove("open"); });
+  </script>
+
+</body>
+</html>

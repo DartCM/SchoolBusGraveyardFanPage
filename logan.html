@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logan Fields</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css">
+<style>
+  .character-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .dragon-photo {
+    max-width: 300px;   /* same size as Aiden */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;     /* centers the image */
+  }
+</style>
+
+
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <header class="dragon-header">
+      <div class="dragon-name">Logan Fields</div>
+      <div class="dragon-class">Main Character</div>
+    </header>
+
+    <div class="dragon-image">
+      <img src="Logan.webp" alt="Logan Fields" class="dragon-photo">
+    </div>
+
+    <section class="section description-block">
+      <div class="section-title">Description</div>
+      <div class="section-body">
+        <p>
+        Logan Fields is a protagonist in School Bus Graveyard. He debuted in Episode 1, and is an astronomy loving teenage boy. He's usually seen being bullied by Barron.  </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Personality</div>
+      <div class="section-body">
+        <p> Logan is initially timid, shy and jumpy. He got bullied by Barron and his friends up until Tyler threatened to tell on Barron. Logan eventually, due to being exposed to the phantom dimension nightly, realized (With the help of Tyler) that if he had to put up with and face phantoms every night, he could face Barron. So, after being given self-defense training by Mr. and Mrs. Banner, he finally takes Barron down. His personality seems to harden, and he seems much less timid and jumpy than he used to, even taking initiative during a certain situation in one of the fast pass episodes. Ashlyn's leadership skills seem to have rubbed off on Logan at some point.
+          </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Physical Appearance</div>
+      <div class="section-body">
+        <p>Logan Fields is a thin boy with an average height, standing at 5'6. He's pale in color, and has diamond blue eyes and black framed glasses. He has thin black eyebrows. He has light reddish brown hair that lays flat on his head, with bangs that cover the majority of his forehead. He's often seen wearing clothes that match the academia aesthetic, or just casualwear such as turtlenecks and jeans. Later in the series, he's seen without his glasses. In the phantom dimension, he can be seen wearing the black protective suit that was purchased by Aiden. 
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+    charBtn.addEventListener("click", (e) => { e.stopPropagation(); charDrop.classList.toggle("open"); });
+    document.addEventListener("click", () => { charDrop.classList.remove("open"); });
+  </script>
+
+</body>
+</html>

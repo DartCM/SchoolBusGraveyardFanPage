@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ashlyn Banner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+<style>
+  .character-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .dragon-photo {
+    max-width: 300px;   /* same size as Aiden */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;     /* centers the image */
+  }
+</style>
+
+
+<body>
+
+  <body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    
+    <!-- HEADER -->
+    <header class="dragon-header">
+      <div class="dragon-name">Ashlyn Banner</div>
+      <div class="dragon-class">Main Protagonist</div>
+    </header>
+
+    <!-- IMAGE -->
+<div class="dragon-image">
+  <img src="Ashlyn.webp" alt="Ashlyn Banner" class="dragon-photo">
+</div>
+
+    <!-- DESCRIPTION -->
+    <section class="section description-block">
+      <div class="section-title">Description</div>
+      <div class="section-body">
+        <p>
+          Ashlyn Banner is the main protagonist of School Bus Graveyard. She debuted in Episode 1 and is a typical teenage girl. It has been confirmed by Red that despite her father saying “16 years of existence,” Ashlyn is 15 at the beginning of the comic.
+        </p>
+      </div>
+    </section>
+
+    <!-- PERSONALITY -->
+    <section class="section">
+      <div class="section-title">Personality</div>
+      <div class="section-body">
+        <p>
+          Ashlyn is introverted and finds socializing exhausting. She dislikes talking to anyone outside her family and has never had a friend before the events of the story. She is blunt, straightforward, and highly observant. She loves dance, practices ballet, and uses a DDR mat at home. She was taught kickboxing by her parents but refused other forms of self‑defense. Despite her quiet nature, she becomes a natural leader when danger strikes.
+        </p>
+      </div>
+    </section>
+
+    <!-- APPEARANCE -->
+    <section class="section">
+      <div class="section-title">Physical Appearance</div>
+      <div class="section-body">
+        <p>
+          Ashlyn is 4'11" with pale, freckled skin. She has hip‑length ginger hair, usually worn in two braids, and slate green eyes. In the phantom dimension, her hair becomes chin‑length and fluffy. She often wears army‑themed clothing and carries a black backpack. Due to tinnitus and hyperacusis, she frequently wears earplugs or headphones.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CLICK DROPDOWN SCRIPT -->
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+
+    charBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      charDrop.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+      charDrop.classList.remove("open");
+    });
+  </script>
+
+</body>
+</html>

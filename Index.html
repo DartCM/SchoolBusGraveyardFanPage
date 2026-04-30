@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>School Bus Graveyard – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+
+  <!-- INTERNAL CSS FOR RED TITLE -->
+  <style>
+    .dragon-name {
+      color: #ff0000; /* bright red */
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.6); /* optional glow */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="dragon-header">
+      <div class="dragon-name">School Bus Graveyard</div>
+      <div class="dragon-class">Fan Archive</div>
+    </header>
+
+    <!-- SECTION 1 -->
+    <section class="section description-block">
+      <div class="section-title">About the Series</div>
+      <div class="section-body">
+        <p>
+          <strong>School Bus Graveyard</strong> is a thriller Webtoon created by Red.  
+          It follows Ashlyn Banner and her classmates as they are dragged into a dangerous alternate world that awakens every night at midnight.
+        </p>
+        <p>
+          The story takes place in Alto, Georgia around 2016, beginning near the start of the school year.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section">
+      <div class="section-title">Series Information</div>
+      <div class="section-body">
+        <p>Premiere: July 20, 2021 (Webtoon Originals)</p>
+        <p>Genre: Thriller</p>
+        <p>Rating: 9.9 / 10</p>
+        <p>Popularity: Over 135M views and nearly 2M subscribers</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="section">
+      <div class="section-title">Main Characters</div>
+      <div class="section-body">
+        <p>
+          Learn more about Ashlyn, Aiden, Ben, Taylor, Tyler, Logan, and the creatures of the Midnight World.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="section">
+      <div class="section-title">Frequently Asked Questions</div>
+      <div class="section-body">
+        <p><strong>Is this page official?</strong> No — this is a fan-made page.</p>
+        <p><strong>Is “Aidlyn” canon?</strong> Aiden’s crush is confirmed, but Ashlyn’s feelings are not.</p>
+        <p><strong>Is the series a romance?</strong> No. It is primarily a thriller.</p>
+        <p><strong>Are any ships canon?</strong> No relationships are officially confirmed.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+
+    charBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      charDrop.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+      charDrop.classList.remove("open");
+    });
+  </script>
+
+</body>
+</html>

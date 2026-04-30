@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About – School Bus Graveyard Fan Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css">
+
+  <style>
+    .about-header {
+      text-align: center;
+      border-bottom: 1px solid #3a4b62;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+
+    .about-title {
+      font-family: "Trajan Pro", "Cinzel", serif;
+      letter-spacing: 0.18em;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    .about-subtitle {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      color: #a7c4ff;
+      margin-top: 4px;
+    }
+
+    .about-section {
+      margin-bottom: 22px;
+    }
+
+    .about-section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b0c6ff;
+      margin-bottom: 6px;
+      padding-left: 10px;
+    }
+
+    .about-section-body {
+      font-size: 0.95rem;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="about-header">
+      <div class="about-title">About the Series</div>
+      <div class="about-subtitle">School Bus Graveyard</div>
+    </header>
+
+    <!-- SECTION 1 -->
+    <section class="about-section">
+      <div class="about-section-title">What Is School Bus Graveyard?</div>
+      <div class="about-section-body">
+        <p>
+          <strong>School Bus Graveyard</strong> is a thriller Webtoon created by Red.  
+          The story follows Ashlyn Banner and her classmates as they are pulled into a dangerous alternate world that awakens every night at midnight.
+        </p>
+        <p>
+          The series originally began as a Canvas comic before being promoted to Webtoon Originals on July 20, 2021.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="about-section">
+      <div class="about-section-title">Setting</div>
+      <div class="about-section-body">
+        <p>
+          The story takes place in Alto, Georgia, around the year 2016.  
+          Much of the plot revolves around the mysterious “phantom dimension,” a twisted version of reality filled with monsters and corrupted versions of familiar places.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="about-section">
+      <div class="about-section-title">Themes</div>
+      <div class="about-section-body">
+        <p>
+          School Bus Graveyard blends:
+        </p>
+        <ul class="inline-list">
+          <li>Thriller and suspense</li>
+          <li>Found family</li>
+          <li>Survival horror</li>
+          <li>Character‑driven storytelling</li>
+          <li>Mystery and world‑building</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="about-section">
+      <div class="about-section-title">Popularity</div>
+      <div class="about-section-body">
+        <p>
+          The series has earned:
+        </p>
+        <ul class="inline-list">
+          <li>Over 135 million views</li>
+          <li>Nearly 2 million subscribers</li>
+          <li>A 9.9/10 rating on Webtoon</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section class="about-section">
+      <div class="about-section-title">This Website</div>
+      <div class="about-section-body">
+        <p>
+          This is a fan‑made project created to celebrate the series, its characters, and its world.  
+          All artwork and story elements belong to Red and Webtoon.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+
+    charBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      charDrop.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+      charDrop.classList.remove("open");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Taylor Hernandez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+<style>
+  .character-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .dragon-photo {
+    max-width: 300px;   /* same size as Aiden */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;     /* centers the image */
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <header class="dragon-header">
+      <div class="dragon-name">Taylor Hernandez</div>
+      <div class="dragon-class">Main Character</div>
+    </header>
+
+    <div class="dragon-image">
+      <img src="Taylor.webp" alt="Taylor Hernandez" class="dragon-photo">
+    </div>
+
+    <section class="section description-block">
+      <div class="section-title">Description</div>
+      <div class="section-body">
+        <p>
+          Taylor Hernandez is a protagonist in School Bus Graveyard. She debuted in Episode 1, and is an incredibly sweet teenage girl. She's always seen around her twin brother Tyler. </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Personality</div>
+      <div class="section-body">
+        <p>Taylor is an incredibly sweet girl who is often helping her groupmates feel better after they go through something. She seems to freeze when scared initially, but has grown out of that habit. She shows an interest in mechanics, as she's in the mechanics club at her school. She shows a low tolerance for difficult situations, as she started crying the first night of being sent to the phantom dimension. After a while though, she gains the bravery to turn around and join Logan when he starts shooting at the phantom centipede. She's usually hanging out with her brother and his friends. 
+          </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Physical Appearance</div>
+      <div class="section-body">
+        <p>
+          Taylor Hernandez is a slightly taller than average girl, standing at 5'6. She has caramel colored skin and shorter worried eyebrows and chocolate brown eyes with visible lashes. She has chest length chocolate brown hair with bangs that swirl to the right side of her head. Her hair spikes out slightly similar to her twin brother, Tyler. She's often seen matching outfits with her brother Tyler, but she often wears casual clothes such as a T-shirt and shorts, or a long-sleeve and leggings. In the park shenanigans art posted by Red, she's seen wearing a grey sweater and black sweatpants with two white stripes down the sides. In the phantom dimension, she can be seen wearing the black protective suit that was purchased by Aiden. </p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+    charBtn.addEventListener("click", (e) => { e.stopPropagation(); charDrop.classList.toggle("open"); });
+    document.addEventListener("click", () => { charDrop.classList.remove("open"); });
+  </script>
+
+</body>
+</html>

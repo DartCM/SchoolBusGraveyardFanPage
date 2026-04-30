@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phantoms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css">
+
+  <style>
+    .dragon-image {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .dragon-photo {
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="dragon-header">
+      <div class="dragon-name">Phantoms</div>
+      <div class="dragon-class">Main Antagonists</div>
+    </header>
+
+    <!-- IMAGE (optional placeholder) -->
+    <div class="dragon-image">
+      <img src="phantom.webp" alt="Phantoms" class="dragon-photo">
+    </div>
+
+    <!-- DESCRIPTION -->
+    <section class="section description-block">
+      <div class="section-title">Description</div>
+      <div class="section-body">
+        <p>
+          The Phantoms are the primary antagonists of <strong>School Bus Graveyard</strong>.  
+          They are demonic, human‑shaped creatures that relentlessly pursue the main group, first appearing in Episode 1.  
+          They are known for their glowing white eyes, permanent wide smiles, and their ability to navigate the Midnight World with frightening speed and aggression.
+        </p>
+      </div>
+    </section>
+
+    <!-- PERSONALITY -->
+    <section class="section">
+      <div class="section-title">Personality</div>
+      <div class="section-body">
+        <p>
+          Phantoms appear completely braindead, lacking higher thought or emotion.  
+          Despite this, they demonstrate basic survival instincts such as climbing, chasing, attacking, and reacting to sound.  
+          They behave similarly to zombies — driven purely by instinct, aggression, and the urge to hunt.  
+          It is unknown whether they eat their victims, as this has never been observed.
+        </p>
+      </div>
+    </section>
+
+    <!-- APPEARANCE -->
+    <section class="section">
+      <div class="section-title">Physical Appearance</div>
+      <div class="section-body">
+        <p>
+          Phantoms are thin, human‑like black creatures with sunken, glowing white eyes and a bright, permanent smile.  
+          Their bodies appear starved, and they possess long, sharp claws used for climbing and attacking.  
+          They react poorly to light and are significantly smaller than the larger Phantom Centipedes.
+        </p>
+      </div>
+    </section>
+
+    <!-- FIRST APPEARANCE -->
+    <section class="section">
+      <div class="section-title">First Appearance</div>
+      <div class="section-body">
+        <p>
+          The Phantoms first appear in <strong>Episode 1</strong>, chasing the main six through Ashlyn’s backyard and into the school bus graveyard.  
+          One manages to climb the walls and infiltrate the area, demonstrating their persistence and agility.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+
+    charBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      charDrop.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+      charDrop.classList.remove("open");
+    });
+  </script>
+
+</body>
+</html>

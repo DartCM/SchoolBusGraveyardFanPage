@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery – School Bus Graveyard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+
+  <style>
+    /* PAGE TITLE */
+    .dragon-name {
+      color: #ff0000;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+
+    /* GALLERY WRAPPER */
+    .gallery-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    /* SCROLL AREA */
+    .gallery-scroll {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .gallery-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-scroll img {
+      width: 180px;
+      border-radius: 10px;
+      border: 1px solid #3a4b62;
+      cursor: pointer;
+      scroll-snap-align: start;
+      transition: 0.25s;
+    }
+
+    .gallery-scroll img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 64, 129, 0.4);
+    }
+
+    /* ARROWS */
+    .gallery-arrow {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid #3a4b62;
+      color: #ff4081;
+      font-size: 2rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.25s;
+      z-index: 10;
+    }
+
+    .gallery-arrow:hover {
+      background: rgba(255, 64, 129, 0.2);
+      transform: scale(1.1);
+    }
+
+    .gallery-arrow.left {
+      margin-right: 10px;
+    }
+
+    .gallery-arrow.right {
+      margin-left: 10px;
+    }
+
+    /* LIGHTBOX */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="dragon-header">
+      <div class="dragon-name">Gallery</div>
+      <div class="dragon-class">Image Collection</div>
+    </header>
+
+    <!-- GALLERY SECTION -->
+    <section class="section">
+      <div class="section-title">Images</div>
+
+      <div class="gallery-wrapper">
+
+        <!-- LEFT ARROW -->
+        <button class="gallery-arrow left" onclick="scrollGallery(-1)">&#10094;</button>
+
+        <!-- SCROLLABLE IMAGES -->
+        <div class="gallery-scroll" id="galleryScroll">
+          <img src="img1.webp" alt="Image 1" onclick="openLightbox(this.src)">
+          <img src="img2.webp" alt="Image 2" onclick="openLightbox(this.src)">
+          <img src="img3.webp" alt="Image 3" onclick="openLightbox(this.src)">
+          <img src="img4.webp" alt="Image 4" onclick="openLightbox(this.src)">
+          <img src="img5.webp" alt="Image 1" onclick="openLightbox(this.src)">
+          <img src="img6.webp" alt="Image 2" onclick="openLightbox(this.src)">
+          <img src="img7.webp" alt="Image 3" onclick="openLightbox(this.src)">
+          <img src="img8.webp" alt="Image 4" onclick="openLightbox(this.src)">
+          <img src="img9.webp" alt="Image 1" onclick="openLightbox(this.src)">
+          <img src="img10.webp" alt="Image 2" onclick="openLightbox(this.src)">
+          <img src="img11.webp" alt="Image 3" onclick="openLightbox(this.src)">
+          <img src="img12.webp" alt="Image 4" onclick="openLightbox(this.src)">
+        </div>
+
+        <!-- RIGHT ARROW -->
+        <button class="gallery-arrow right" onclick="scrollGallery(1)">&#10095;</button>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img">
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    function scrollGallery(direction) {
+      const gallery = document.getElementById("galleryScroll");
+      const amount = 220;
+      gallery.scrollBy({
+        left: direction * amount,
+        behavior: "smooth"
+      });
+    }
+
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+
+    charBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      charDrop.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+      charDrop.classList.remove("open");
+    });
+  </script>
+
+</body>
+</html>

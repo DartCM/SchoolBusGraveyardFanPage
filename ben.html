@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ben Clark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+<style>
+  .character-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .dragon-photo {
+    max-width: 300px;   /* same size as Aiden */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;     /* centers the image */
+  }
+</style>
+
+</head>
+
+<<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown" id="charDrop">
+        <button class="dropbtn">Characters</button>
+        <div class="dropdown-content">
+          <a href="ashlyn.html">Ashlyn Banner</a>
+          <a href="aiden.html">Aiden Clark</a>
+          <a href="ben.html">Ben Clark</a>
+          <a href="taylor.html">Taylor Hernandez</a>
+          <a href="tyler.html">Tyler Hernandez</a>
+          <a href="logan.html">Logan Fields</a>
+          <a href="phantom.html">Phantom</a>
+        </div>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+
+    <header class="dragon-header">
+      <div class="dragon-name">Ben Clark</div>
+      <div class="dragon-class">Main Character</div>
+    </header>
+
+    <div class="dragon-image">
+      <img src="Ben.webp" alt="Ben Clark" class="dragon-photo">
+    </div>
+
+    <section class="section description-block">
+      <div class="section-title">Description</div>
+      <div class="section-body">
+        <p>
+          Ben Clark is a protagonist in School Bus Graveyard. He debuted in Episode 1, and is known for being quiet.  </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Personality</div>
+      <div class="section-body">
+        <p>Ben is a quiet boy. He seems to have a good heart, often caring for his friends. Ben used to be known as a gentle giant who loved to sing. However, that changed after Shane, one of Ben's bullies, choked him to the point of voice box damage. After this incident, he became selectively mute and got into street fighting to tale out the anger he has for Shane, which eventually led to him fighting (And winning) against a boy related to a gang member. Due to this, he and his family ended up in danger- Which caused Ben to have to move in with his cousin's family. He can roughly speak, he just dislikes his voice, so he doesn't. He tends to listen to music often, enjoying it, whilst also attempting to avoid anything that may trigger trauma or an anger meltdown. He carry a sketchbook around. His therapist told him to carry it with the intent to draw and release any anger he may inhabit, but he instead uses it to write his thoughts and express them to the group without speaking.
+           </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Physical Appearance</div>
+      <div class="section-body">
+        <p>
+          Ben Clark is a tall boy, standing at 6'0. He has tan skin and light brown eyes, with thick black eyebrows. He has short spiked hair that is greyish brown in color. He's usually seen wearing the same dark grey shirt and a pair of jeans. In the phantom dimension, he can be seen wearing the black protective suit that was purchased by Aiden. </p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const charDrop = document.getElementById("charDrop");
+    const charBtn = charDrop.querySelector(".dropbtn");
+    charBtn.addEventListener("click", (e) => { e.stopPropagation(); charDrop.classList.toggle("open"); });
+    document.addEventListener("click", () => { charDrop.classList.remove("open"); });
+  </script>
+
+</body>
+</html>
